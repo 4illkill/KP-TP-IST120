@@ -1,0 +1,79 @@
+﻿@using System.Web.UI.WebControls
+@using Hospital_Management_System.Models
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<header id="Home">
+    <nav>
+        <div class="row">
+
+            <ul class="main-nav js-main-nav">
+                <li><a href="#Home">О нас</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="@Url.Action("Register", "Account")">Регистрация</a></li>
+                <li><a href="@Url.Action("Login", "Account")">Войти</a></li>
+            </ul>
+            <a class="mobile-nav-icon js-mobile-nav-icon"><i class="ion-ios-menu"></i></a>
+        </div>
+    </nav>
+    <div class="hero-text-box">
+        <h1>Поликлиника </h1>
+        <br>
+        <a class="btn btn-ghost js-scroll-to-start" href="#">Подробнее</a>
+    </div>
+</header>
+
+<section class="section-features js-section-features" id="services">
+    <div class="row">
+        <h2>Наши услуги</h2>
+        <p class="long-copy">Частная поликлиника.</p>
+    </div>
+    <div class="row js-wp-1">
+        <div class="col span-1-of-4 box for-icons">
+            <i class="icon ion-md-medkit"></i>
+            <h3>Экстренная помощь</h3>
+            <p>Наша поликлиника производит самую быструю экстренную помощь</p>
+        </div>
+        <div class="col span-1-of-4 box for-icons">
+            <i class="icon ion-md-call"></i>
+            <h3>Поддержка 24/7</h3>
+            <p>Наши врачи работают круглосуточно. Они всегда готовы помочь.</p>
+        </div>
+        <div class="col span-1-of-4 box for-icons">
+            <i class="icon ion-md-car"></i>
+            <h3>Скорая</h3>
+            <p>Только у нас можно сделать предзаказ скорой за день до инцидента!</p>
+        </div>
+        <div class="col span-1-of-4 box for-icons">
+            <i class="icon ion-md-checkmark-circle-outline"></i>
+            <h3>Проверенная организация</h3>
+            <p>В нашей поликлинике не раз проводились проверки, поэтому вы можете нам доверять.</p>
+        </div>
+    </div>
+</section>
+
+
+
+
+<footer>
+    <div class="row">
+        <div class="col span-1-of-2">
+            <ul class="social-links">
+                <li><a href="#"><i class="ion-logo-facebook"></i></a></li>
+                <li><a href="#"><i class="ion-logo-twitter"></i></a></li>
+                <li><a href="#"><i class="ion-logo-googleplus"></i></a></li>
+                <li><a href="#"><i class="ion-logo-instagram"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <p> Copyright &copy; @DateTime.Now.Year by Lobanov. All rights reserved.</p>
+    </div>
+</footer>
+
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")
+}
